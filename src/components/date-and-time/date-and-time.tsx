@@ -3,5 +3,6 @@ import { formatDate } from '../../utils/format-date/format-date';
 import * as Styled from './date-and-time-style';
 
 export const DateAndTime: FC = ({ children }: { children: string }): ReactElement => {
+    if (!children) return null;
     return <Styled.Date>{formatDate(children)}</Styled.Date>;
 };

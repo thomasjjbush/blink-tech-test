@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateAndTime should match snapshot 1`] = `
+<styled.span
+  styles="
+    color: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+"
+>
+  1/1/1970 01:00
+</styled.span>
+`;

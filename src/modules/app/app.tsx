@@ -1,9 +1,9 @@
 import React, { FC, lazy, ReactElement, Suspense, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { ErrorState, Store } from '../../../types';
 import { Loading } from '../../components/loading/loading';
 import { Conversations } from '../conversations/conversations';
 import { Error } from '../error/error';
+import { ErrorState, Store } from '../../../types';
 import * as Styled from './app-style';
 
 const Messages = lazy(() => import('../messages/messages').then((module) => ({ default: module.Messages })));

@@ -5,4 +5,4 @@ export const setData = (endpoint: Endpoints | string, method: string, body: unkn
         method,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
-    });
+    }).then((r) => r.json());

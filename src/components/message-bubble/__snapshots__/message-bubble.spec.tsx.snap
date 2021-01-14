@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageBubble should match snapshot for non user message 1`] = `
+<styled.div
+  styles="
+    align-self: auto;
+    background-color: theme.lightBlue;
+    border-radius: 20px;
+    color: auto;
+    display: inline;
+    margin-bottom: 20px;
+    max-width: 350px;
+    padding: 20px;
+    position: relative;
+
+    &:after {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid theme.lightBlue;
+        content: '';
+        left: 20px;
+        position: absolute;
+        top: 100%;
+        width: 0;
+    }
+"
+>
+  <styled.p
+    styles="
+    margin: 0 0 10px;
+"
+  >
+    text
+  </styled.p>
+  <DateAndTime>
+    a long time ago, in a galaxy far away
+  </DateAndTime>
+</styled.div>
+`;
+
+exports[`MessageBubble should match snapshot for user message (apply correct conditional styles and render edit button) 1`] = `
+<styled.div
+  isUser={true}
+  styles="
+    align-self: flex-end;
+    background-color: theme.brightBlue;
+    border-radius: 20px;
+    color: white;
+    display: inline;
+    margin-bottom: 20px;
+    max-width: 350px;
+    padding: 20px;
+    position: relative;
+
+    &:after {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid theme.brightBlue;
+        content: '';
+        right: 20px;;
+        position: absolute;
+        top: 100%;
+        width: 0;
+    }
+"
+>
+  <styled.p
+    styles="
+    margin: 0 0 10px;
+"
+  >
+    text
+  </styled.p>
+  <styled.button
+    data-test-id="edit-button"
+    onClick={[Function]}
+    styles="
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    margin-right: 5px;
+    padding: 0;
+    text-decoration: underline;
+"
+    type="button"
+  >
+    Edit
+  </styled.button>
+  <DateAndTime>
+    a long time ago, in a galaxy far away
+  </DateAndTime>
+</styled.div>
+`;

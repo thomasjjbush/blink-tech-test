@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading should match snapshot 1`] = `
+<styled.div
+  styles="
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+"
+>
+  <styled.img
+    src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif"
+    styles="
+    display: block;
+    width: 200px;
+    height: auto;
+"
+  />
+</styled.div>
+`;

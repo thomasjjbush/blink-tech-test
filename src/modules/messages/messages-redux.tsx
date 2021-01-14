@@ -1,8 +1,8 @@
+import { AnyAction } from 'redux';
 import { getData } from '../../utils/get-data/get-data';
 import { setData } from '../../utils/set-data/set-data';
-import { Action, Endpoints, ErrorActions, Message, MessageActions, MessageState } from '../../../types';
 import { createMessage } from '../../utils/create-message/create-message';
-import { AnyAction } from 'redux';
+import { Action, Endpoints, ErrorActions, Message, MessageActions, MessageState } from '../../../types';
 
 export const loadMessages = (conversation: string): Action => async (dispatch) => {
     try {

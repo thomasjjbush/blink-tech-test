@@ -7,7 +7,7 @@ export const MessageBubble: FC<Props> = ({ id, isUser, last_updated, onClick, te
     <Styled.Bubble isUser={isUser}>
         <Styled.Text>{text}</Styled.Text>
         {isUser && (
-            <Styled.Button onClick={() => onClick(id, text)} type="button">
+            <Styled.Button data-test-id="edit-button" onClick={() => onClick(id, text)} type="button">
                 Edit
             </Styled.Button>
         )}

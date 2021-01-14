@@ -26,7 +26,7 @@ export const Conversations: FC<Props> = ({ conversation, setConversation }: Prop
                         onClick={() => setConversation(id)}
                         type="button"
                     >
-                        <Styled.Name>{name}</Styled.Name>
+                        <Styled.Name data-test-id="conversation-name">{name}</Styled.Name>
                         <DateAndTime>{last_updated}</DateAndTime>
                     </Styled.Conversation>
                 ))}

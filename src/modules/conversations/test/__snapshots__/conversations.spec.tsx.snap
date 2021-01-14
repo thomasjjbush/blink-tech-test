@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Conversation should match snapshot and apply correct conditional styles to conversation button 1`] = `
+<styled.div
+  styles="
+    background-color: theme.darkBlue;
+"
+>
+  <styled.button
+    active={false}
+    key="5453"
+    onClick={[Function]}
+    styles="
+    background-color: transparent;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    display: block;
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+
+    &:not(:last-of-type) {
+        border-bottom: solid 2px white;
+    }
+"
+    type="button"
+  >
+    <styled.h2
+      data-test-id="conversation-name"
+      styles="
+    margin: 0 0 10px;
+"
+    >
+      grandma
+    </styled.h2>
+    <DateAndTime>
+      <Component />
+    </DateAndTime>
+  </styled.button>
+  <styled.button
+    active={true}
+    key="423"
+    onClick={[Function]}
+    styles="
+    background-color: theme.brightBlue;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    display: block;
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+
+    &:not(:last-of-type) {
+        border-bottom: solid 2px white;
+    }
+"
+    type="button"
+  >
+    <styled.h2
+      data-test-id="conversation-name"
+      styles="
+    margin: 0 0 10px;
+"
+    >
+      peter griffin
+    </styled.h2>
+    <DateAndTime>
+      <Component />
+    </DateAndTime>
+  </styled.button>
+</styled.div>
+`;

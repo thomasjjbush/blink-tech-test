@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot when conversation has been selected 1`] = `
+<styled.main
+  styles="
+    display: flex;
+    height: 100%;
+"
+>
+  <Conversations
+    conversation="conversation-id"
+    setConversation={[Function]}
+  />
+  <Suspense
+    fallback={<Loading />}
+  >
+    <lazy
+      conversation="conversation-id"
+    />
+  </Suspense>
+</styled.main>
+`;
+
+exports[`App should match snapshot when conversation has not been selected 1`] = `
+<styled.main
+  styles="
+    display: flex;
+    height: 100%;
+"
+>
+  <Conversations
+    conversation={null}
+    setConversation={[Function]}
+  />
+</styled.main>
+`;
