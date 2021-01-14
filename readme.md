@@ -1,16 +1,18 @@
 # Blink technical test 
 
+I spent more than the recommended 2 hours and the code is still farrrrrrr from productionn ready or anything. However, I think it demonstrates my approach and style. 
+
 ## Features
 
 - The provided JSON is being served by `json-server`. 
 
-- All data is stored via redux. I am sending POST/PATCH requests when a user sends/edits a message, however all actions are optimistic so the store doesn't rely on the responses. Have implemented **very** basic error handling, if any Request rejects I render a fatal error screen.
+- All data is stored via redux (with thunk). I am sending POST/PATCH requests when a user sends/edits a message, however all actions are optimistic so the store doesn't rely on the responses. Have implemented **very** basic error handling - if any Request rejects I render a fatal error screen.
 
 - Fully Typed
 
 - Bundle splittng - dynamically import `messages` bundle after selecting a conversation.
 
-- Tried to style the UI using Blink colour pallette. I used `styled-components` to implement this. (I remembered you use postcss after doing this! So sorry about that)
+- Tried to style the UI using the Blink colour pallette. I used `styled-components` to implement this. (I remembered you use postcss after doing this! Otherwise I would have used that - sorry about that)
 
 - Unit tests using jest, enzyme & redux-mock-store (not full coverage just wanted to demonstrate). Added a custom serializer to capture styles in snapshots.
 
