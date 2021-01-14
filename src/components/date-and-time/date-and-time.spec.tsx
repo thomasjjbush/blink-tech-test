@@ -4,7 +4,7 @@ import { DateAndTime } from './date-and-time';
 
 describe('DateAndTime', () => {
     it('should match snapshot', () => {
-        expect(shallow(<DateAndTime>{new Date(null).toString()}</DateAndTime>)).toMatchSnapshot();
+        expect(shallow(<DateAndTime>{new Date(null).toISOString()}</DateAndTime>)).toMatchSnapshot();
     });
 
     it('should be null render if children resolves to false', () => {

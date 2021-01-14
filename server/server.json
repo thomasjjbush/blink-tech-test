@@ -3,22 +3,22 @@
     {
       "id": "5f58bcd7a88fab5f34df94d6",
       "name": "eiusmod nostrud sunt",
-      "last_updated": "Thu Jan 14 2021 17:17:18 GMT+0000 (Greenwich Mean Time)"
+      "last_updated": "2020-08-18T11:16:45"
     },
     {
       "id": "5f58bcd7200c90cfaac93778",
       "name": "laborum irure enim",
-      "last_updated": "Thu Jan 14 2021 17:10:21 GMT+0000 (Greenwich Mean Time)"
+      "last_updated": "2021-01-14T23:53:53.259Z"
     },
     {
       "id": "5f58bcd7c23d93722017ccb6",
       "name": "ex cupidatat elit",
-      "last_updated": "Thu Jan 14 2021 16:59:57 GMT+0000 (Greenwich Mean Time)"
+      "last_updated": "2020-07-31T04:26:38"
     },
     {
       "id": "5f58bcd7e81abbc8cde13cde",
       "name": "ut officia aliqua",
-      "last_updated": "Thu Jan 14 2021 17:19:00 GMT+0000 (Greenwich Mean Time)"
+      "last_updated": "2020-07-26T11:58:12"
     },
     {
       "id": "5f58bcd7a3d6fed0fd68b7a9",
@@ -232,179 +232,11 @@
       "last_updated": "2020-01-21T05:19:04"
     },
     {
-      "conversation": "5f58bcd7c23d93722017ccb6",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 11:59:16 GMT+0000 (Greenwich Mean Time)",
-      "text": "TEST",
-      "id": "hT_8qXf"
-    },
-    {
-      "conversation": "5f58bcd7c23d93722017ccb6",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 12:04:27 GMT+0000 (Greenwich Mean Time)",
-      "text": "Another test... !!!!!",
-      "id": "--11YHo"
-    },
-    {
       "conversation": "5f58bcd7200c90cfaac93778",
-      "id": "0a98857b-7b35-4530-a78a-0c27a3e1e3ff",
+      "id": "d449899f-354f-4e60-85d7-0099c5e18141",
       "isUser": true,
-      "last_updated": "Thu Jan 14 2021 12:09:02 GMT+0000 (Greenwich Mean Time)",
-      "text": "HELLLLLLLOOOO!!!! :D"
-    },
-    {
-      "conversation": "5f58bcd7c23d93722017ccb6",
-      "id": "f638f626-26da-4c8b-9411-8a7644210552",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 12:10:17 GMT+0000 (Greenwich Mean Time)",
-      "text": "Yeeetttttt"
-    },
-    {
-      "conversation": "5f58bcd7e81abbc8cde13cde",
-      "id": "6d879629-1b41-4438-82d7-792c791c9bdb",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 12:26:46 GMT+0000 (Greenwich Mean Time)",
-      "text": "This message and associated conversation will persist on refresh thanks to json-server, srsly - it really will!"
-    },
-    {
-      "conversation": "5f58bcd7e81abbc8cde13cde",
-      "id": "3414f503-d2af-4ff3-95f2-dfa2b33400c1",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 12:27:08 GMT+0000 (Greenwich Mean Time)",
-      "text": "HELLLLLO"
-    },
-    {
-      "conversation": "5f58bcd7e81abbc8cde13cde",
-      "id": "1a59f35d-0cb7-4dbc-8915-bdc35167329b",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 12:28:44 GMT+0000 (Greenwich Mean Time)",
-      "text": "Get readdddyyyy"
-    },
-    {
-      "conversation": "5f58bcd7200c90cfaac93778",
-      "id": "dae599b5-4435-4944-96d9-423c645153bc",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 12:43:07 GMT+0000 (Greenwich Mean Time)",
-      "text": "new msg, hi!"
-    },
-    {
-      "conversation": "5f58bcd7200c90cfaac93778",
-      "id": "5923d937-82d2-4bc0-89ce-2b93e48e30d6",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 14:13:48 GMT+0000 (Greenwich Mean Time)",
-      "text": "Wag1 mofo"
-    },
-    {
-      "conversation": "5f58bcd7200c90cfaac93778",
-      "id": "f089e848-dd04-4d1c-90d3-0d60a8a9a33a",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 14:59:38 GMT+0000 (Greenwich Mean Time)",
-      "text": "Hello again master"
-    },
-    {
-      "conversation": "5f58bcd7c23d93722017ccb6",
-      "id": "b449c6c3-2356-4120-a81b-a16824d57dbe",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 16:38:46 GMT+0000 (Greenwich Mean Time)",
-      "text": "Anuva message from me,,,,"
-    },
-    {
-      "conversation": "5f58bcd7200c90cfaac93778",
-      "id": "ac1f14d4-33ad-4902-974a-f62e7b1c3fbd",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 16:40:38 GMT+0000 (Greenwich Mean Time)",
-      "text": "TESTTTTTTTTTTTTTT"
-    },
-    {
-      "conversation": "5f58bcd7c23d93722017ccb6",
-      "id": "6effcaf0-d505-41af-b779-80f3ca530538",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 16:45:23 GMT+0000 (Greenwich Mean Time)",
-      "text": "kldsakhfas;ufhd ;ODHSUAFLUHADFS ULH IHSFADLKHFDS IUHDFSA OP'JDSFA;OIHDFSOI, xoxo"
-    },
-    {
-      "conversation": "5f58bcd7c23d93722017ccb6",
-      "id": "bbacc1bd-745b-402f-9261-1f2110521736",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 16:49:44 GMT+0000 (Greenwich Mean Time)",
-      "text": ""
-    },
-    {
-      "conversation": "5f58bcd7c23d93722017ccb6",
-      "id": "8f1f42ff-3588-49d2-b756-525148f66bb0",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 16:52:45 GMT+0000 (Greenwich Mean Time)",
-      "text": "SSSSSSSS"
-    },
-    {
-      "conversation": "5f58bcd7c23d93722017ccb6",
-      "id": "f8bee7b1-9c64-44f6-8bb6-cd7b099a1fec",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 16:54:39 GMT+0000 (Greenwich Mean Time)",
-      "text": "xxxxxxxxxx"
-    },
-    {
-      "conversation": "5f58bcd7c23d93722017ccb6",
-      "id": "52e9131f-f8b6-4daa-a910-3c6d60bce04d",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 16:58:07 GMT+0000 (Greenwich Mean Time)",
-      "text": "TEST!"
-    },
-    {
-      "conversation": "5f58bcd7c23d93722017ccb6",
-      "id": "ffe445b4-63f0-4e23-9736-be1346317105",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 16:58:31 GMT+0000 (Greenwich Mean Time)",
-      "text": "hehehehe"
-    },
-    {
-      "conversation": "5f58bcd7c23d93722017ccb6",
-      "id": "4754a072-ae0a-4faa-8757-5f107bb0f7ae",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 16:59:53 GMT+0000 (Greenwich Mean Time)",
-      "text": "Blah Blah Blah"
-    },
-    {
-      "conversation": "5f58bcd7c23d93722017ccb6",
-      "id": "1ec9791c-49ab-414b-aa91-f34517c59dee",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 16:59:57 GMT+0000 (Greenwich Mean Time)",
-      "text": "HELLO!"
-    },
-    {
-      "conversation": "5f58bcd7200c90cfaac93778",
-      "id": "9a35297f-1862-44aa-ba22-c2d109104b7b",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 17:01:16 GMT+0000 (Greenwich Mean Time)",
-      "text": "Hello!"
-    },
-    {
-      "conversation": "5f58bcd7e81abbc8cde13cde",
-      "id": "b06f66bd-a5f6-4b7c-8315-5814bf38c5dc",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 17:03:45 GMT+0000 (Greenwich Mean Time)",
-      "text": "Oooooooooo :strong:"
-    },
-    {
-      "conversation": "5f58bcd7200c90cfaac93778",
-      "id": "480eba3d-13f2-4f30-b40b-986a5a3cc393",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 17:10:21 GMT+0000 (Greenwich Mean Time)",
-      "text": "Hello there my young friend, xoxo"
-    },
-    {
-      "conversation": "5f58bcd7a88fab5f34df94d6",
-      "id": "3e8659a7-333f-45e1-9329-6d81310910cd",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 17:17:18 GMT+0000 (Greenwich Mean Time)",
-      "text": "ddd updated by me"
-    },
-    {
-      "conversation": "5f58bcd7e81abbc8cde13cde",
-      "id": "cfd5c1ed-d4af-4e42-92c4-5bd2c4056deb",
-      "isUser": true,
-      "last_updated": "Thu Jan 14 2021 17:19:00 GMT+0000 (Greenwich Mean Time)",
-      "text": "wdwdw"
+      "last_updated": "2021-01-14T23:53:53.259Z",
+      "text": "This is an example of a message sent via this app. Only these messages are editable. (Click the edit button below to edit me)."
     }
   ]
 }

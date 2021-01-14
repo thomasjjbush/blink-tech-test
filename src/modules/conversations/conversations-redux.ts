@@ -7,7 +7,7 @@ export const loadConversations = (): Action => async (dispatch) => {
         const payload = await getData<Conversation[]>(Endpoints.CONVERSATIONS);
         dispatch({ type: ConversationActions.LOADED, payload });
     } catch (err) {
-        dispatch({ type: ErrorActions.FATAL, payload: err });
+        dispatch({ type: ErrorActions.FATAL });
     }
 };
 

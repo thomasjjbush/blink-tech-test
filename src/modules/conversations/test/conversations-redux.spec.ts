@@ -1,6 +1,5 @@
 import { MockStore, mockStore, runReducer } from '../../../../test/jest.utils';
 import { getData } from '../../../utils/get-data/get-data';
-import { errorReducer } from '../../error/error-redux';
 import { conversationsReducer, loadConversations } from '../conversations-redux';
 
 jest.mock('../../../utils/get-data/get-data', () => ({
@@ -29,8 +28,7 @@ describe('conversation redux', () => {
             (getData as jest.Mock).mockRejectedValueOnce('errrrrr');
             await store.dispatch(loadConversations());
 
-            expect(store.getActions()).toEqual([{ type: 'error/FATAL', payload: 'errrrrr' }]);
-            expect(runReducer(store, errorReducer)).toEqual({ code: 400, fatal: true, message: 'errrrrr' });
+            expect(store.getActions()).toEqual([{ type: 'error/FATAL' }]);
         });
     });
 });

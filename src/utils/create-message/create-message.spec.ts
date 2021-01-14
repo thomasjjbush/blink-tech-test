@@ -13,7 +13,7 @@ describe('createMessage', () => {
             conversation: 'conversation',
             id: 'id',
             isUser: true,
-            last_updated: 'Thu Jan 01 1970 01:00:00 GMT+0100 (Greenwich Mean Time)',
+            last_updated: '1970-01-01T00:00:00.000Z',
             text: 'text',
         });
     });

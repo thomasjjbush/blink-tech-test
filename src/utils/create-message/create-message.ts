@@ -5,6 +5,6 @@ export const createMessage = ({
     conversation,
     id = uuid(),
     isUser = true,
-    last_updated = new Date().toString(),
+    last_updated = new Date().toISOString(),
     text,
 }: Partial<Message>): Message => ({ conversation, id, isUser, last_updated, text });
