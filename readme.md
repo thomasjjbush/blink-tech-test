@@ -1,18 +1,14 @@
 # Blink technical test 
 
-## What have I done??
+## Features
 
-- The provided JSON is being served (and persisted) by `json-server`. **I have slightly tweaked the json so I can hit two seperate endpoints (`conversations` & `messages`) to try and more closely simulate a production scenario (I hope this isnt classed as cheating or anything!!!)**. 
+- The provided JSON is being served by `json-server`. 
 
-- All data is stored via redux (ui binding via react-redux). Store layout: `{ conversations: Conversations[]; messages: Messages[] }`.
+- All data is stored via redux (ui binding via react-redux). I am sending POST/PATCH requests when a user sends/edits a message, however all actions are optimistic so the store doesn't rely on the responses. Have implemented **Very** basic error handling, if any Request rejects I render a fatal error screen.
 
-- Bundle splittng - dynamically impoort `messages` bundle after selecting a conversation.
-
-- User can both send and edit messages (if it was "sent" by them).
+- Bundle splittng - dynamically import `messages` bundle after selecting a conversation.
 
 - Tried to style the UI using Blink colour pallette.
-
-- **Very** basic error handling, if any Promise rejects render a fatal error screen.
 
 - Unit tests (not full coverage just wanted to demonstrate).
 
@@ -23,7 +19,7 @@ Run `yarn` to install dependancies
 Run `yarn test` to run all unit tests
 
 ## Mock server
-Run `yarn server` to run `json-sever` (in seperate terminal to `yarn start`)
+Run `yarn server` to run mock server (in seperate terminal to `yarn start`)
 
 ## Development
 Run `yarn start` for webpack development mode with hot reloading
