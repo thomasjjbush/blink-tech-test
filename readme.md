@@ -12,7 +12,7 @@
 
 - Tried to style the UI using Blink colour pallette. I used `styled-components` to implement this. (I remembered you use postcss after doing this! So sorry about that)
 
-- Unit tests (not full coverage just wanted to demonstrate). Added a custom serializer to capture styles in snapshots.
+- Unit tests using jest, enzyme & redux-mock-store (not full coverage just wanted to demonstrate). Added a custom serializer to capture styles in snapshots.
 
 ## Getting started
 Run `yarn` to install dependancies
