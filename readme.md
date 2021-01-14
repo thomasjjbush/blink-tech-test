@@ -4,7 +4,7 @@
 
 - The provided JSON is being served by `json-server`. 
 
-- All data is stored via redux (ui binding via react-redux). I am sending POST/PATCH requests when a user sends/edits a message, however all actions are optimistic so the store doesn't rely on the responses. Have implemented **Very** basic error handling, if any Request rejects I render a fatal error screen.
+- All data is stored via redux (ui binding via react-redux). I am sending POST/PATCH requests when a user sends/edits a message, however all actions are optimistic so the store doesn't rely on the responses. Have implemented **very** basic error handling, if any Request rejects I render a fatal error screen.
 
 - Bundle splittng - dynamically import `messages` bundle after selecting a conversation.
 
