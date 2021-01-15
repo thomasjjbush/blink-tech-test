@@ -1,16 +1,16 @@
 # Blink technical test 
 
-I spent more than the recommended 2 hours and the code is still farrrrrrr from productionn ready or anything. However, I think it demonstrates my approach and style. Hope you like it!
+I spent more than the recommended 2 hours and the code is still far way from productionn ready or anything. However, I think it nicely demonstrates my approach and style. Hope you like it!
 
 ## Features
 
-- The provided JSON is being served by `json-server`. 
+- The provided JSON is being served by a mock server (`json-server`, exposes two endpoints `conversations`, `messages`). 
 
 - All data is stored via redux (with thunk). I am sending POST/PATCH requests when a user sends/edits a message, however all actions are optimistic so the store doesn't rely on the responses. Have implemented **very** basic error handling - if any Request rejects I render a fatal error screen.
 
 - TypeScript
 
-- Bundle splittng - dynamically import `messages` bundle after selecting a conversation.
+- Bundle splittng - dynamically import `messages` bundle after selecting a conversation. This keeps the main bundle lightweight.
 
 - Tried to style the UI using the Blink colour pallette. I used `styled-components` to implement this. (I remembered you use postcss after doing this! Otherwise I would have used that - sorry about that)
 
