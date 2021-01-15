@@ -18,6 +18,8 @@ I spent more than the recommended 2 hours and the code is still far way from pro
 
 ## Improvements
 
+- ARIA
+
 - I am concerned the messages module is a little "crowded", could possibly benefit from further code splitting.
 
 - The UI is not fully responsive.
