@@ -6,8 +6,8 @@ import { editMessage, loadMessages, messagesReducer, sendMessage } from '../mess
 jest.mock('../../../utils/create-message/create-message', () => ({
     createMessage: jest.fn((m) => ({ ...m, last_updated: '77' })),
 }));
-jest.mock('../../../utils/get-data/get-data', () => ({ getData: jest.fn().mockReturnValue('messages') }));
-jest.mock('../../../utils/set-data/set-data');
+jest.mock('../../../utils/get-data/get-data', () => ({ getData: jest.fn().mockResolvedValue('messages') }));
+jest.mock('../../../utils/set-data/set-data', () => ({ setData: jest.fn().mockResolvedValue('messages') }));
 
 describe('message redux', () => {
     let store: MockStore;

@@ -16,25 +16,17 @@ export const loadMessages = (conversation: string): Action => async (dispatch) =
 export const editMessage = (conversation: string, id: string, text: string): Action => async (dispatch) => {
     dispatch({ type: MessageActions.EDIT, payload: { key: conversation, id, text } });
 
-    try {
-        await setData(`${Endpoints.MESSAGES}/${id}`, 'PATCH', { text });
-    } catch (err) {
-        dispatch({ type: ErrorActions.FATAL });
-    }
+    setData(`${Endpoints.MESSAGES}/${id}`, 'PATCH', { text }).catch(() => dispatch({ type: ErrorActions.FATAL }));
 };
 
 export const sendMessage = (conversation: string, text: string): Action => async (dispatch) => {
     const payload = createMessage({ conversation, text });
     dispatch({ type: MessageActions.SEND, payload });
 
-    try {
-        await Promise.all([
-            setData(Endpoints.MESSAGES, 'POST', payload),
-            setData(`${Endpoints.CONVERSATIONS}/${conversation}`, 'PATCH', { last_updated: payload.last_updated }),
-        ]);
-    } catch (err) {
-        dispatch({ type: ErrorActions.FATAL });
-    }
+    Promise.all([
+        setData(Endpoints.MESSAGES, 'POST', payload),
+        setData(`${Endpoints.CONVERSATIONS}/${conversation}`, 'PATCH', { last_updated: payload.last_updated }),
+    ]).catch(() => dispatch({ type: ErrorActions.FATAL }));
 };
 
 export const messagesReducer = (state: MessageState = {}, { payload, type }: AnyAction): MessageState => {
