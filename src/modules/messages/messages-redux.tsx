@@ -16,6 +16,7 @@ export const loadMessages = (conversation: string): Action => async (dispatch) =
 export const editMessage = (conversation: string, id: string, text: string): Action => async (dispatch) => {
     dispatch({ type: MessageActions.EDIT, payload: { key: conversation, id, text } });
 
+    // If I had more time I would properly handle this error case in a try/catch block and render a notification informing the user the EDIT failed and undo the optimistic action above
     setData(`${Endpoints.MESSAGES}/${id}`, 'PATCH', { text }).catch(() => dispatch({ type: ErrorActions.FATAL }));
 };
 
@@ -23,6 +24,7 @@ export const sendMessage = (conversation: string, text: string): Action => async
     const payload = createMessage({ conversation, text });
     dispatch({ type: MessageActions.SEND, payload });
 
+    // If I had more time I would properly handle this error case in a try/catch block and render a notification informing the user the SEND failed and undo the optimistic action above
     Promise.all([
         setData(Endpoints.MESSAGES, 'POST', payload),
         setData(`${Endpoints.CONVERSATIONS}/${conversation}`, 'PATCH', { last_updated: payload.last_updated }),

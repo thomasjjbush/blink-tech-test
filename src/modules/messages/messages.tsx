@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useCallback, useEffect, useRef, useState } from 'react';
+import React, { ChangeEvent, FC, ReactElement, useCallback, useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { editMessage, loadMessages, sendMessage } from './messages-redux';
 import { MessageBubble } from '../../components/message-bubble/message-bubble';
@@ -19,6 +19,10 @@ export const Messages: FC<Props> = ({ conversation }: Props): ReactElement => {
         setEditText(text);
         setNewMessage(message);
     }, []);
+
+    const onChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+        editText ? setEditText(e.currentTarget.value) : setNewMessage(e.currentTarget.value);
+    };
 
     const onClick = () => {
         resetState();
@@ -47,9 +51,7 @@ export const Messages: FC<Props> = ({ conversation }: Props): ReactElement => {
             <Styled.Footer>
                 <Styled.Textarea
                     value={editText || newMessage}
-                    onChange={(e) =>
-                        editText ? setEditText(e.currentTarget.value) : setNewMessage(e.currentTarget.value)
-                    }
+                    onChange={onChange}
                     rows={5}
                     placeholder="Type a messsage"
                 />
