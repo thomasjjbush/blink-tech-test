@@ -1,6 +1,6 @@
 # Blink technical test 
 
-I spent more than the recommended 2 hours and the code is still far way from productionn ready or anything. However, I think it nicely demonstrates my approach and style. Hope you like it!
+I spent more than the recommended 2 hours and the code is still far way from productionn ready or anything. It's using `react`, `redux`, `typescript`, `jest`, `enzyme`, `styled-components`, `webpack` (see full dependancy list in `package.json`).
 
 ## Features
 

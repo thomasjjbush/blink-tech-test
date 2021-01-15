@@ -30,7 +30,7 @@ export default ({ NODE_ENV }: { NODE_ENV: string }): WebpackConfig => ({
     module: {
         rules: [
             {
-                exclude: [/node_modules/, /\.(spec|test).(tx|tsx)?$/],
+                exclude: [/node_modules/, /\.(spec|test).(tx|tsx)?$/, /test/],
                 test: /\.(ts|tsx)$/,
                 use: {
                     loader: 'ts-loader',
