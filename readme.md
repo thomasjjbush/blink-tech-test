@@ -1,20 +1,20 @@
 # Blink technical test 
 
-I spent more than the recommended 2 hours and the code is still far way from productionn ready or anything. It's using `react`, `redux`, `typescript`, `jest`, `enzyme`, `styled-components`, `webpack` (see full dependancy list in `package.json`).
+I spent more than the recommended 2 hours and the code is still far way from production ready or anything. It's using `react`, `redux`, `typescript`, `jest`, `enzyme`, `styled-components`, `webpack` (see full dependancy list in `package.json`). I hope you like it! 🤞
 
 ## Features
 
 - The provided JSON is being served by a mock server (`json-server`, exposes two endpoints `conversations`, `messages`). 
 
-- All data is stored via redux (with thunk). I am sending POST/PATCH requests when a user sends/edits a message, however all actions are optimistic so the store doesn't rely on the responses. Have implemented **very** basic error handling - if any Request rejects I render a fatal error screen.
+- All data is stored via redux (using thunk middleware). I am sending POST/PATCH requests when a user sends/edits a message, however all actions are optimistic so the store doesn't rely on the responses. Have implemented **very** basic error handling - if any Request rejects I render a fatal error screen.
 
 - TypeScript
 
-- Bundle splittng - dynamically import `messages` bundle after selecting a conversation. This keeps the main bundle lightweight.
+- Bundle splittng - dynamically import `messages` bundle only after selecting a conversation. This keeps the main bundle lightweight.
 
 - Tried to style the UI using the Blink colour pallette. I used `styled-components` to implement this. (I remembered you use postcss after doing this! Otherwise I would have used that - sorry about that)
 
-- Unit tests using jest, enzyme & redux-mock-store (not full coverage just wanted to demonstrate). Added a custom serializer to capture styles in snapshots.
+- Unit tests using `jest`, `enzyme` & `redux-mock-store` (not full coverage just wanted to demonstrate). Also added a custom serializer to capture styles in snapshots.
 
 ## Getting started
 Run `yarn` to install dependancies
