@@ -16,6 +16,20 @@ I spent more than the recommended 2 hours and the code is still far way from pro
 
 - Unit tests using `jest`, `enzyme` & `redux-mock-store` (not full coverage just wanted to demonstrate). Also added a custom serializer to capture styles in snapshots.
 
+## Improvements
+
+- I am concerned the messages module is a little "crowded", could possibly benefit from further code splitting.
+
+- The UI is not fully responsive.
+
+- Error handling for non fatal errors.
+
+- Full unit test coverage
+
+- Functional tests to cover user journeys (i.e I select a conversation, I should be able to edit message, I should see my edit result in updated UI)
+
+- Though a portion of the styles are captured via snapshots - would like to have implemented visual regression testing.
+
 ## Getting started
 Run `yarn` to install dependancies
 
