@@ -6,7 +6,9 @@ import { Error } from '../error/error';
 import { ErrorState, Store } from '../../../types';
 import * as Styled from './app-style';
 
-const Messages = lazy(() => import('../messages/messages').then((module) => ({ default: module.Messages })));
+const Messages = lazy(() =>
+    import(/* webpackChunkName: "messages" */ '../messages/messages').then((module) => ({ default: module.Messages })),
+);
 
 export const App: FC = (): ReactElement => {
     const error = useSelector<Store, ErrorState>((state) => state.error);
