@@ -28,6 +28,7 @@ exports[`MessageBubble should match snapshot for non user message 1`] = `
   <styled.p
     styles="
     margin: 0 0 10px;
+    white-space: pre-wrap;
 "
   >
     text
@@ -67,6 +68,7 @@ exports[`MessageBubble should match snapshot for user message (apply correct con
   <styled.p
     styles="
     margin: 0 0 10px;
+    white-space: pre-wrap;
 "
   >
     text

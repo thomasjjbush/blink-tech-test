@@ -45,17 +45,11 @@ describe('message redux', () => {
     });
 
     describe('editMessage', () => {
-        const expectedAction = {
-            payload: {
-                id: 'id',
-                key: 'convo',
-                text: 'NEW TEXTY',
-            },
-            type: 'messages/EDIT',
-        };
+        const message = { conversation: 'convo', id: 'id', last_updated: '888', text: 'NEW TEXTY' };
+        const expectedAction = { payload: message, type: 'messages/EDIT' };
 
         it('should dispatch correct EDITED action', async () => {
-            await store.dispatch(editMessage('convo', 'id', 'NEW TEXTY'));
+            await store.dispatch(editMessage(message));
 
             expect(setData).toHaveBeenCalledTimes(1);
             expect(setData).toHaveBeenCalledWith('messages/id', 'PATCH', { text: 'NEW TEXTY' });
@@ -77,7 +71,7 @@ describe('message redux', () => {
 
         it('should dispatch ERROR action if messages PATCH requert fails', async () => {
             (setData as jest.Mock).mockRejectedValueOnce(new Error());
-            await store.dispatch(editMessage('convo', 'id', 'NEW TEXTY'));
+            await store.dispatch(editMessage(message));
 
             expect(store.getActions()).toEqual([expectedAction, { type: 'error/FATAL' }]);
         });

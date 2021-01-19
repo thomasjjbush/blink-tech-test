@@ -9,24 +9,24 @@ export const Messages: FC<Props> = ({ conversation }: Props): ReactElement => {
     const dispatch = useDispatch();
     const messages = useSelector<Store, Message[]>((state) => state.messages[conversation]);
 
-    const anchor = useRef<HTMLDivElement>();
-    const [editID, setEditID] = useState('');
-    const [editText, setEditText] = useState('');
+    const feed = useRef<HTMLDivElement>();
     const [newMessage, setNewMessage] = useState('');
+    const [editedMessage, setEditedMessage] = useState<Message>(null);
 
-    const resetState = useCallback((id = '', text = '', message = '') => {
-        setEditID(id);
-        setEditText(text);
-        setNewMessage(message);
+    const resetState = useCallback(() => {
+        setEditedMessage(null);
+        setNewMessage('');
     }, []);
 
     const onChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-        editText ? setEditText(e.currentTarget.value) : setNewMessage(e.currentTarget.value);
+        if (editedMessage) setEditedMessage({ ...editedMessage, text: e.currentTarget.value });
+        else setNewMessage(e.currentTarget.value);
     };
 
     const onClick = () => {
+        if (editedMessage) dispatch(editMessage(editedMessage));
+        else dispatch(sendMessage(conversation, newMessage));
         resetState();
-        dispatch(editText ? editMessage(conversation, editID, editText) : sendMessage(conversation, newMessage));
     };
 
     useEffect(() => {
@@ -37,29 +37,28 @@ export const Messages: FC<Props> = ({ conversation }: Props): ReactElement => {
     }, [conversation]);
 
     useEffect(() => {
-        anchor?.current?.scrollIntoView?.();
+        if (feed?.current) feed.current.scrollTop = feed.current.scrollHeight;
     }, [messages?.length]);
 
     return (
         <Styled.Messages>
-            <Styled.Feed>
+            <Styled.Feed ref={feed}>
                 {messages?.map((props) => (
-                    <MessageBubble key={props.id} {...props} onClick={resetState} />
+                    <MessageBubble key={props.id} {...props} onClick={setEditedMessage} />
                 ))}
-                <span ref={anchor} />
             </Styled.Feed>
             <Styled.Footer>
                 <Styled.Textarea
-                    value={editText || newMessage}
+                    value={editedMessage?.text || newMessage}
                     onChange={onChange}
                     rows={5}
                     placeholder="Type a messsage"
                 />
                 <div>
-                    <Styled.Button disabled={!editText && !newMessage} onClick={onClick}>
-                        {editText ? 'EDIT' : 'SEND'}
+                    <Styled.Button disabled={!editedMessage?.text && !newMessage} onClick={onClick}>
+                        {editedMessage ? 'EDIT' : 'SEND'}
                     </Styled.Button>
-                    {editText && <Styled.Button onClick={() => resetState()}>CANCEL</Styled.Button>}
+                    {editedMessage && <Styled.Button onClick={() => resetState()}>CANCEL</Styled.Button>}
                 </div>
             </Styled.Footer>
         </Styled.Messages>

@@ -13,11 +13,13 @@ export const loadMessages = (conversation: string): Action => async (dispatch) =
     }
 };
 
-export const editMessage = (conversation: string, id: string, text: string): Action => async (dispatch) => {
-    dispatch({ type: MessageActions.EDIT, payload: { key: conversation, id, text } });
+export const editMessage = (message: Message): Action => async (dispatch) => {
+    dispatch({ type: MessageActions.EDIT, payload: message });
 
     // If I had more time I would properly handle this error case in a try/catch block and render a notification informing the user the EDIT failed and undo the optimistic action above
-    setData(`${Endpoints.MESSAGES}/${id}`, 'PATCH', { text }).catch(() => dispatch({ type: ErrorActions.FATAL }));
+    setData(`${Endpoints.MESSAGES}/${message.id}`, 'PATCH', { text: message.text }).catch(() =>
+        dispatch({ type: ErrorActions.FATAL }),
+    );
 };
 
 export const sendMessage = (conversation: string, text: string): Action => async (dispatch) => {
@@ -36,7 +38,7 @@ export const messagesReducer = (state: MessageState = {}, { payload, type }: Any
         case MessageActions.EDIT:
             return {
                 ...state,
-                [payload.key]: state[payload.key].map((message) =>
+                [payload.conversation]: state[payload.conversation].map((message) =>
                     message.id === payload.id ? { ...message, text: payload.text } : message,
                 ),
             };
