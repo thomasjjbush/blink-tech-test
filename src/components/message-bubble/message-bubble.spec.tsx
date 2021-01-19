@@ -29,6 +29,12 @@ describe('MessageBubble', () => {
         wrapper.find({ 'data-test-id': 'edit-button' }).simulate('click');
 
         expect(props.onClick).toHaveBeenCalledTimes(1);
-        expect(props.onClick).toHaveBeenCalledWith('id', 'text');
+        expect(props.onClick).toHaveBeenCalledWith({
+            conversation: 'convo',
+            id: 'id',
+            isUser: true,
+            last_updated: 'a long time ago, in a galaxy far away',
+            text: 'text',
+        });
     });
 });

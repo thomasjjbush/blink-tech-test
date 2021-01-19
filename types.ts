@@ -52,7 +52,7 @@ export enum MessageActions {
 }
 
 export interface MessageBubbleProps extends Message {
-    onClick: (id: string, text: string) => void;
+    onClick: (message: Message) => void;
 }
 
 export interface MessageState {
