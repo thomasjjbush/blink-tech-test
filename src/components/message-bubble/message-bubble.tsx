@@ -4,7 +4,7 @@ import { MessageBubbleProps as Props } from '../../../types';
 import * as Styled from './message-bubble-style';
 
 export const MessageBubble: FC<Props> = ({ id, isUser, last_updated, onClick, text }: Props): ReactElement => (
-    <Styled.Bubble isUser={isUser}>
+    <Styled.Bubble isUser={isUser} role="log" tabIndex={0}>
         <Styled.Text>{text}</Styled.Text>
         {isUser && (
             <Styled.Button data-test-id="edit-button" onClick={() => onClick(id, text)} type="button">
