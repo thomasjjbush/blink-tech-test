@@ -41,7 +41,7 @@ export const Messages: FC<Props> = ({ conversation }: Props): ReactElement => {
     }, [messages?.length]);
 
     return (
-        <Styled.Messages>
+        <Styled.Messages aria-label="Messages" role="tabpanel">
             <Styled.Feed>
                 {messages?.map((props) => (
                     <MessageBubble key={props.id} {...props} onClick={resetState} />
@@ -50,10 +50,11 @@ export const Messages: FC<Props> = ({ conversation }: Props): ReactElement => {
             </Styled.Feed>
             <Styled.Footer>
                 <Styled.Textarea
-                    value={editText || newMessage}
+                    autoFocus={true}
                     onChange={onChange}
-                    rows={5}
                     placeholder="Type a messsage"
+                    rows={5}
+                    value={editText || newMessage}
                 />
                 <div>
                     <Styled.Button disabled={!editText && !newMessage} onClick={onClick}>
